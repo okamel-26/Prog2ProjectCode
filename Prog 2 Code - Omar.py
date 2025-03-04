@@ -19,3 +19,26 @@ def add_grade(name, subject, grade):
    else:
        students[name][subject] = grade  # Store the grade inside the student's dictionary
        print(f"Grade added: {name} - {subject}: {grade}")
+# Function to calculate a student's GPA
+def calculate_gpa(name):
+   """Calculates and returns the GPA for a student."""
+   if name not in students or not students[name]:  # Check if student exists and has grades
+       print(f"No grades available for {name}.")
+       return None
+
+   grades = students[name].values()  # Get all grades
+   gpa = sum(grades) / len(grades)  # Calculate average
+   return round(gpa, 2)  # Return rounded GPA value
+
+# Function to display a student's report
+def display_report(name):
+   """Displays the student's grades and GPA."""
+   if name not in students:
+       print(f"Student {name} not found.")
+   elif not students[name]:  # If the student has no grades
+       print(f"{name} has no grades recorded yet.")
+   else:
+       print(f"\nReport for {name}:")
+       for subject, grade in students[name].items():  # Loop through subjects and grades
+           print(f"{subject}: {grade}")
+       print(f"GPA: {calculate_gpa(name)}\n")  # Print GPA
