@@ -79,3 +79,27 @@ def main():
            gpa = calculate_gpa(name)
            if gpa is not None:
                print(f"GPA for {name}: {gpa}")
+
+# Option 4: Display a student's report
+       elif choice == "4":
+           name = input("Enter student name: ")
+           display_report(name)
+
+# Option 5: Show all students currently in the system
+       elif choice == "5":
+           print("\nAll Students:")
+           for student in students:
+               print(f"- {student}")
+
+# Option 6: Exit the program
+       elif choice == "6":
+           print("Exiting program. Goodbye!")
+           break
+
+# Handle invalid choices
+       else:
+           print("Invalid choice. Please try again.")
+
+# Run the program if this file is executed
+if _name_ == "_main_":
+   main()
