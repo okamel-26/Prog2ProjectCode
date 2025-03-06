@@ -101,5 +101,5 @@ def main():
            print("Invalid choice. Please try again.")
 
 # Run the program if this file is executed
-if _name_ == "_main_":
+if __name__ == "_main_":
    main()
