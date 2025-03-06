@@ -63,7 +63,7 @@ def main():
            name = input("Enter student name: ")
            add_student(name)
 
- # Option 2: Add or update a grade
+# Option 2: Add or update a grade
        elif choice == "2":
            name = input("Enter student name: ")
            subject = input("Enter subject: ")
@@ -73,7 +73,7 @@ def main():
            except ValueError:
                print("Invalid grade. Please enter a number.")
 
-       # Option 3: Calculate and display GPA
+# Option 3: Calculate and display GPA
        elif choice == "3":
            name = input("Enter student name: ")
            gpa = calculate_gpa(name)
