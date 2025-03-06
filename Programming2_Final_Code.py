@@ -42,3 +42,23 @@ def display_report(name):
        for subject, grade in students[name].items():  # Loop through subjects and grades
            print(f"{subject}: {grade}")
        print(f"GPA: {calculate_gpa(name)}\n")  # Print GPA
+
+# Main function to handle user interaction
+def main():
+   """Main function to run the grade tracker program."""
+   while True:
+       # Display menu options for the user
+       print("\nOptions:")
+       print("1. Add Student")
+       print("2. Add/Update Grade")
+       print("3. Calculate GPA")
+       print("4. Display Report")
+       print("5. Show All Students")
+       print("6. Exit")
+
+       choice = input("Enter your choice: ")
+
+       # Option 1: Add a student
+       if choice == "1":
+           name = input("Enter student name: ")
+           add_student(name)
